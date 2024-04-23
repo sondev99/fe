@@ -1,23 +1,25 @@
-import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
-import Link from 'next/link';
-import ProductDetail from './ProductDetail';
-import ListRating from './ListRating';
-import { getProductById } from '@/action/ProductAction';
-import { useParams } from 'next/navigation';
-import AddRating from './AddRating';
-import NullData from '@/components/NullData';
+import MaxWidthWrapper from "@/components/ui/MaxWidthWrapper";
+import Link from "next/link";
+import ProductDetail from "./ProductDetail";
+import ListRating from "./ListRating";
+import { getProductById } from "@/action/ProductAction";
+import { useParams } from "next/navigation";
+import AddRating from "./AddRating";
+import NullData from "@/components/NullData";
 
 interface PageProps {
   productId?: string;
 }
 
 const BREADCRUMBS = [
-  { id: 1, name: 'Home', href: '/' },
-  { id: 2, name: 'Products', href: '/products' },
+  { id: 1, name: "Home", href: "/" },
+  { id: 2, name: "Products", href: "/products" },
 ];
 
 const ProductDetailPage = async ({ params }: { params: PageProps }) => {
   const product = (await getProductById(params.productId)).data;
+
+  console.log(product);
 
   if (!product)
     return <NullData title="Oops! Product with the given id does not exist" />;

@@ -11,7 +11,7 @@ const CustomSelect = ({ field, options, lable, errorMessage }: Props) => {
   return (
     <>
       <div className='w-full md:min-w-[257px]'>
-        <label htmlFor={lable} className='block mb-2 font-medium text-gray-900 dark:text-white'>
+        <label htmlFor={lable} className='block mb-2 font-medium text-white'>
           {lable}
         </label>
         <Select {...field} id='countries' options={options} r />

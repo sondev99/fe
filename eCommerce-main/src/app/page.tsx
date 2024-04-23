@@ -1,7 +1,7 @@
 import { getAllBanner } from '@/action/BannerAction';
 import { getBaseCategoryAction } from '@/action/CategoryAction';
 import { getProductByCategory } from '@/action/ProductAction';
-import { Banner, Hero } from '@/components/Hero';
+import { Banner } from '@/components/Hero';
 import ProductReel from '@/components/ProductReel';
 import MaxWidthWrapper from '@/components/ui/MaxWidthWrapper';
 
@@ -16,7 +16,9 @@ export default async function Home() {
   const baseCatListRes = await getBaseCategoryAction();
   const bannerData = await getAllBanner();
 
-  const productReels: ProductReel[] = baseCatListRes.data.map(
+  console.log(baseCatListRes)
+
+  const productReels: ProductReel[] = baseCatListRes?.data?.map(
     (category: Category) => {
       return {
         title: category.name,

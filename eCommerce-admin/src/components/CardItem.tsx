@@ -27,7 +27,7 @@ const CardItem = ({ product, brandOptions, categoryOptions }: CardItem) => {
       <Card size='2' className='!bg-secondary text-primary'>
         <Flex direction={'column'} gap={'3'}>
           <img
-            src={product?.imageUrls[0]?.imageUrl}
+            src={product?.thumbnailUrls[0]?.thumbnailUrl}
             alt='Bold typography'
             style={{
               backgroundColor: 'var(--gray-5)'

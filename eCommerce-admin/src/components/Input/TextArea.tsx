@@ -25,7 +25,7 @@ export default function TextArea({
 }: TextAreaProps) {
   return (
     <div className='w-full'>
-      <label htmlFor={id} className='block mb-2 text-sm font-medium text-gray-900 dark:text-white'>
+      <label htmlFor={id} className='block mb-2 text-sm font-medium text-white'>
         {lable}
       </label>
       <textarea

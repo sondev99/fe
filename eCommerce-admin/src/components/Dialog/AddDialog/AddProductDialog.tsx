@@ -265,7 +265,7 @@ const AddProductDialog = ({ brandOptions, categoryOptions }: AddProductDialogPro
               </div>
             </div>
             <div className='mt-4 '>
-              <label htmlFor='Select images' className='block mb-2 font-medium text-gray-900 dark:text-white'>
+              <label htmlFor='Select images' className='block mb-2 font-medium text-white'>
                 Select images
               </label>
               <div className='grid grid-cols-2 gap-3 text-white text-sm'>
