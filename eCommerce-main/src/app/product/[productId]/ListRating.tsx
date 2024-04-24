@@ -1,16 +1,13 @@
 "use client";
 
-import reviewApi from "@/apis/reviewApi";
-import userApi from "@/apis/userApi";
 import Heading from "@/components/Heading";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Rating } from "@mui/material";
 
 import moment from "moment";
-import { useEffect, useState } from "react";
 
 type ListRatingProps = {
-  reviews: ReviewReponse[];
+  reviews: Review[];
 };
 
 const ListRating = ({ reviews }: ListRatingProps) => {

@@ -28,7 +28,7 @@ interface ReviewReponse {
 
   content: string | undefined;
 
-  userId: string | undefined;
+  user: UserInfo | undefined;
 
   productId?: string | undefined;
   createDate: Date;
