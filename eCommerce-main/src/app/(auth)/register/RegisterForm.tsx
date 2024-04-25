@@ -37,8 +37,14 @@ const RegisterForm = (props: RegisterFormProps) => {
   });
 
   const handleRegister = async (data: any) => {
+    const registerRequest = {
+      email: data.email,
+      password: data.password,
+      firstName: data.firstName,
+      lastName: data.lastName,
+    };
     setIsLoading(true);
-    const response = await authApi.register(data);
+    const response = await authApi.register(registerRequest);
     if (response.status === 'OK') {
       Swal.fire({
         title: 'Congratulations !',

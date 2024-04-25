@@ -23,9 +23,14 @@ function SignIn() {
   const handleLogin = async (data: LoginForm) => {
     setIsLoading(true)
     const response = await authApi.login(data)
-    console.log(response.data)
+    console.log('response', response)
+
     setIsLoading(false)
     if (response.data.status === 'OK') {
+      if (response.data.role !== 'ADMIN') {
+        toast.error("You don't have permision to access this page")
+        return
+      }
       setAccessToken(response.data.accessToken)
       setRefreshToken(response.data.refreshToken)
       navigate('/')

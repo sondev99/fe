@@ -7,16 +7,16 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
-  // let navigate = useNavigate()
-  // useEffect(() => {
-  //   // Kiểm tra xem có token trong localStorage không
-  //   const access_token = JSON.parse(localStorage.getItem('userStore') || '{}').state.access_token
+  let navigate = useNavigate()
+  useEffect(() => {
+    // Kiểm tra xem có token trong localStorage không
+    const access_token = JSON.parse(localStorage.getItem('userStore') || '{}').state.access_token
 
-  //   if (!access_token) {
-  //     // Nếu không có token, chuyển hướng đến trang login
-  //     navigate('/auth/signin')
-  //   }
-  // }, [])
+    if (!access_token) {
+      // Nếu không có token, chuyển hướng đến trang login
+      navigate('/auth/signin')
+    }
+  }, [])
   return (
     <>
       <Routes>
